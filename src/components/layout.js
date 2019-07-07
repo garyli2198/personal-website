@@ -8,11 +8,33 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import { createGlobalStyle } from 'styled-components'
+import SEO from "./seo"
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #e07628;
+    text-decoration: none;
+  }
+
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Serif", serif;
+  }
 `
 
 const Layout = ({ children }) => {
@@ -28,6 +50,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyle />
+      <SEO title="Home" />
       {children}
     </>
   )

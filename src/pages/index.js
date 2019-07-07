@@ -1,16 +1,31 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
-import SEO from "../components/seo"
+
+const Greeting = styled.h1`
+  font-size: 2.25rem;
+  color: #000;
+  letter-spacing: 0.025em;
+  margin-bottom: 1.5rem;
+`
+
+const SubTitle = styled.p`
+  font-size: 2.25rem;
+  color: #000;
+  letter-spacing: 0.025em;
+  margin-top: 2rem;
+`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Greeting>
+      Hi, <br /> I'm Gary
+    </Greeting>
+    <SubTitle>
+    Lorem ipsum dolor. amet tousled williamsburg. raw denim.
+    </SubTitle>
   </Layout>
 )
 
