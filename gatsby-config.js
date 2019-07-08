@@ -13,10 +13,10 @@ module.exports = {
         fonts: [
           {
             family: `Open Sans`,
+            variants: [`800`],
           },
           {
-            family: `PT Serif`,
-            variants: [`700`]
+            family: `Nunito`,
           },
         ],
       },
