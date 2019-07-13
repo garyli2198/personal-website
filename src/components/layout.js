@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <SEO title="Home" />
+      <SEO title="Gary Li" />
       {children}
     </>
   )
