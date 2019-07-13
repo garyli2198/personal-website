@@ -8,7 +8,7 @@ import Intro from "../intro"
 
 const Wrapper = styled.div`
   width: 100%;
-  @media (max-width: 1280px) {
+  @media (min-width: 1200px) {
     width: 66.67%
   }
 `

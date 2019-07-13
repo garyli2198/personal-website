@@ -31,7 +31,7 @@ const Container = styled.a`
   border-radius: .5rem;
   padding: 2rem;
 
-  @media (max-width: 768px) {
+  @media (min-width: 600px) {
     padding: 6rem 2rem;
   }
 `
@@ -42,11 +42,11 @@ const Title = styled.div`
   padding-top: 2rem;
   color: #FFF;
 
-  @media (max-width: 768px) {
+  @media (min-width: 600px) {
     font-size: 1.875rem;
   }
 
-  @media (max-width: 1280px) {
+  @media (min-width: 1200px) {
     font-size: 2.25rem;
   }
 `
@@ -54,7 +54,7 @@ const Description = styled.div`
   opacity: .75;
   font-size: .875rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  @media (max-width: 768px) {
+  @media (min-width: 600px) {
     font-size: 1rem;
   }
 `

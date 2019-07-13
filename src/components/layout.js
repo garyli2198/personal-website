@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #161719;
   }
 
   a {
@@ -31,8 +32,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Nunito", sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, p {
     font-family: "Open Sans", sans-serif;
+    color: #F5F5F5;
   }
 `
 

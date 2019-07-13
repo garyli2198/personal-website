@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Divider } from "../shared/divider"
-import Content from "../shared/content"
+import Content, { Inner, Title } from "../shared/content"
 
 const WaveWrapper = styled.div`
   position: absolute;
@@ -11,13 +11,15 @@ const WaveWrapper = styled.div`
   transform: matrix(1, 0, 0, -1, 0, 0);
 `
 
-const Contact = ({ children, offset }) => (
+const Contact = ({ offset }) => (
   <>
     <Divider fill="#23262b" speed={0.2} offset={offset}>
 
     </Divider>
     <Content speed={0.4} offset={offset}>
-      {children}
+      <Inner>
+        <Title>Get in Touch</Title>
+      </Inner>
     </Content>
     <Divider speed={0.1} offset={offset}>
 
