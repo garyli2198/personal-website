@@ -27,7 +27,9 @@ const About = ({ offset }) => (
     <Content offset={offset}>
       <Inner>
         <Title>About</Title>
-        <AboutDesc>Hellooooo.</AboutDesc>
+        <AboutDesc>
+          Hey! I'm a student at UC Berkeley studying computer science.
+        </AboutDesc>
       </Inner>
     </Content>
   </>
