@@ -1,15 +1,10 @@
 import React from "react"
-import styled from "styled-components"
 import { Parallax } from "react-spring/renderprops-addons.cjs"
-
 import Landing from "../components/sections/landing"
 import Experience from "../components/sections/experience"
 import About from "../components/sections/about"
 import Contact from "../components/sections/contact";
-
 import Layout from "../components/layout"
-import Image from "../components/image"
-import { Inner } from "../components/shared/content"
 
 const IndexPage = () => (
   <Layout>
