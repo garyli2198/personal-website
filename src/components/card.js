@@ -54,6 +54,7 @@ const Description = styled.div`
   opacity: .75;
   font-size: .875rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #FFF;
   @media (min-width: 600px) {
     font-size: 1rem;
   }
