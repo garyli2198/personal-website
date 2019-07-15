@@ -13,8 +13,8 @@ const WaveWrapper = styled.div`
 `
 
 const SubTitle = styled.p`
+  position: relative;
   color: #dae4e9;
-  text-align: justify;
   font-size: 1.125rem;
 
   @media (min-width: 600px) {
@@ -34,7 +34,8 @@ const Contact = ({ offset }) => (
     <Content speed={0.4} offset={offset}>
       <Inner>
         <Title>Get in Touch</Title>
-        <SubTitle>Say Hi:</SubTitle>
+        <SubTitle>Say Hello</SubTitle>
+        <ContactForm />
       </Inner>
     </Content>
     <Divider speed={0.1} offset={offset}>

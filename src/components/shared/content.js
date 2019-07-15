@@ -4,7 +4,7 @@ import { ParallaxLayer } from "react-spring/renderprops-addons.cjs"
 export const Inner = styled.div`
   width: 100%;
   text-align: center;
-  @media (min-width: 1200px) {
+  @media (min-width: 900px) {
     text-align: left;
   }
   @media (min-width: 1600px) {
