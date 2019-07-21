@@ -5,6 +5,7 @@ const Greeting = styled.h1`
   letter-spacing: 0.025em;
   margin-bottom: 1rem;
   font-size: 3rem;
+  line-height: 4.5rem;
   @media (min-width: 900px) {
     font-size: 4rem;
   }
