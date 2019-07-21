@@ -7,7 +7,7 @@ import Card, { CardsContainer } from "../card"
 const Experience = ({ offset }) => (
   <>
     <DividerMiddle
-      bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
+      bg="linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)"
       speed={-0.2}
       offset={`${offset}.1`}
       factor={2}
@@ -26,7 +26,7 @@ const Experience = ({ offset }) => (
           <Card
             title="Cal Hacks"
             link="https://calhacks.io"
-            background="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+            background="linear-gradient(to right top, #3B9AC1, #00B4C9, #00CCBF, #60E0A6, #ABF087, #F9F871)"
           >
             I'm an organizer of Cal Hacks, the worlds largest collegiate hackathon.
           </Card>

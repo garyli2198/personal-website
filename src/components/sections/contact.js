@@ -34,7 +34,7 @@ const Contact = ({ offset }) => (
     <Content speed={0.4} offset={offset}>
       <Inner>
         <Title>Get in Touch</Title>
-        <SubTitle>Say Hello</SubTitle>
+        <SubTitle>Say Hello!</SubTitle>
         <ContactForm />
       </Inner>
     </Content>

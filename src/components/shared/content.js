@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import { ParallaxLayer } from "react-spring/renderprops-addons.cjs"
+import triangle from "../../svgs/triangle.svg"
+import { rotateAnimation } from "../shared/animation"
 
 export const Inner = styled.div`
   width: 100%;
@@ -19,6 +21,17 @@ export const Title = styled.h1`
   margin-bottom: 2rem;
   letter-spacing: 0.025em;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  &:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: url(${triangle});
+    position: absolute;
+    background-size: 40px;
+    ${rotateAnimation("4s")};
+    left: -60px;
+    top: -6px;
+  }
 `
 
 const Content = styled(ParallaxLayer)`

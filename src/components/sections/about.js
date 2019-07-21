@@ -8,7 +8,7 @@ const AboutDesc = styled.p`
   color: #dae4e9;
   text-align: justify;
   font-size: 1.125rem;
-
+  line-height: 2.5rem;
   @media (min-width: 600px) {
     font-size: 1.25rem;
   }
@@ -29,6 +29,8 @@ const About = ({ offset }) => (
         <Title>About</Title>
         <AboutDesc>
           Hey! I'm a student at UC Berkeley studying computer science.
+          In my free time, I like to game, listen to podcasts, and play
+          with my pet hamster Butters.
         </AboutDesc>
       </Inner>
     </Content>

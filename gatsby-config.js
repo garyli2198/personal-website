@@ -13,8 +13,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Open Sans`,
-            variants: [`800`],
+            family: `Josefin Sans`,
+            variants: [`600`]
           },
           {
             family: `Nunito`,

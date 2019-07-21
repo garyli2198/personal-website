@@ -25,23 +25,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Nunito", sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6, p {
-    font-family: "Open Sans", sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
     color: #F5F5F5;
   }
 `
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <GlobalStyle />
