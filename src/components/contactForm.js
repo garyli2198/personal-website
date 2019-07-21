@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 
-const Hidden = styled.p`
+const Hidden = styled.label`
   display: none;
 `
 
@@ -62,9 +62,7 @@ const Button = styled.button`
 const ContactForm = () => (
   <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="contact" />
-    <Hidden>
-      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-    </Hidden>
+    <Hidden>Don’t fill this out if you're human: <input name="bot-field" type="text"/></Hidden>
     <Input type="text" name="name" placeholder="Name" required/>
     <Input type="email" name="email" placeholder="Email" required/>
     <Input type="text" name="organization" placeholder="Organization"/>
