@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const Greeting = styled.h1`
   letter-spacing: 0.025em;
@@ -9,23 +9,25 @@ const Greeting = styled.h1`
   @media (min-width: 900px) {
     font-size: 4rem;
   }
-`
+`;
 
 const SubTitle = styled.p`
   letter-spacing: 0.025em;
   margin-top: 1rem;
   font-size: 1.5rem;
-  color: #FFF;
+  color: #fff;
   @media (min-width: 900px) {
-    font-size: 2.25rem
+    font-size: 2.25rem;
   }
-`
+`;
 
 const Intro = () => (
   <>
-    <Greeting>Hello, <br /> I'm Gary</Greeting>
+    <Greeting>
+      Hello, <br /> I'm Gary
+    </Greeting>
     <SubTitle>I am an alcoholic who can kinda code.</SubTitle>
   </>
-)
+);
 
-export default Intro
+export default Intro;

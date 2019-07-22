@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Content, { Inner, Title } from "../shared/content"
-import { Divider, DividerMiddle } from "../shared/divider"
-import Card, { CardsContainer } from "../card"
+import React from "react";
+import PropTypes from "prop-types";
+import Content, { Inner, Title } from "../shared/content";
+import { Divider, DividerMiddle } from "../shared/divider";
+import Card, { CardsContainer } from "../card";
 
 const Experience = ({ offset }) => (
   <>
@@ -28,33 +28,36 @@ const Experience = ({ offset }) => (
             link="https://calhacks.io"
             background="linear-gradient(to right top, #3B9AC1, #00B4C9, #00CCBF, #60E0A6, #ABF087, #F9F871)"
           >
-            I'm an organizer of Cal Hacks, the worlds largest collegiate hackathon.
+            I'm an organizer of Cal Hacks, the worlds largest collegiate
+            hackathon.
           </Card>
           <Card
             title="VMware"
             link="https://www.vmware.com/products/appvolumes.html"
             background="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
           >
-            I interned at VMware the summer of 2018 on the AppVolumes team, helping implement the newly designed application packaging workflow.
+            I interned at VMware the summer of 2018 on the AppVolumes team,
+            helping implement the newly designed application packaging workflow.
           </Card>
           <Card
             title="ANova"
             link="https://www.berkeleyanova.org/"
             background="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
-            I'm part of ANova, an organization with a mission to improve computer science education in under-resourced communities across the Bay Area.
+            I'm part of ANova, an organization with a mission to improve
+            computer science education in under-resourced communities across the
+            Bay Area.
           </Card>
         </CardsContainer>
       </Inner>
     </Content>
-    <Divider speed={0.1} offset={offset} factor={2}>
-    </Divider>
+    <Divider speed={0.1} offset={offset} factor={2}></Divider>
   </>
-)
+);
 
-export default Experience
+export default Experience;
 
 Experience.propTypes = {
   children: PropTypes.node.isRequired,
   offset: PropTypes.number.isRequired,
-}
+};

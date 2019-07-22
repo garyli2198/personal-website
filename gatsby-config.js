@@ -3,7 +3,7 @@ module.exports = {
     title: `Gary Li`,
     description: `Gary Li's Personal Website`,
     author: `Gary Li`,
-    url: "https://www.iamgary.li"
+    url: "https://www.iamgary.li",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -14,7 +14,7 @@ module.exports = {
         fonts: [
           {
             family: `Josefin Sans`,
-            variants: [`600`]
+            variants: [`600`],
           },
           {
             family: `Nunito`,
@@ -53,4 +53,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

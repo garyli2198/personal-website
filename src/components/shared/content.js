@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import { ParallaxLayer } from "react-spring/renderprops-addons.cjs"
-import triangle from "../../svgs/triangle.svg"
-import { rotateAnimation } from "../shared/animation"
+import styled from "styled-components";
+import { ParallaxLayer } from "react-spring/renderprops-addons.cjs";
+import triangle from "../../svgs/triangle.svg";
+import { rotateAnimation } from "../shared/animation";
 
 export const Inner = styled.div`
   width: 100%;
@@ -12,7 +12,7 @@ export const Inner = styled.div`
   @media (min-width: 1600px) {
     width: 66.67%;
   }
-`
+`;
 
 export const Title = styled.h1`
   position: relative;
@@ -32,7 +32,7 @@ export const Title = styled.h1`
     left: -60px;
     top: -6px;
   }
-`
+`;
 
 const Content = styled(ParallaxLayer)`
   display: flex;
@@ -46,6 +46,6 @@ const Content = styled(ParallaxLayer)`
   @media (min-width: 900px) {
     padding: 6rem;
   }
-`
+`;
 
-export default Content
+export default Content;

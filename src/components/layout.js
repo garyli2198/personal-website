@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import SEO from "./seo"
-import { createGlobalStyle } from "styled-components"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import SEO from "./seo";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     color: #F5F5F5;
   }
-`
+`;
 
 const Layout = ({ children }) => {
   return (
@@ -39,11 +39,11 @@ const Layout = ({ children }) => {
       <SEO title="Gary Li" />
       {children}
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

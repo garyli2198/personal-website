@@ -15,6 +15,6 @@ const IndexPage = () => (
       <Contact offset={4} />
     </Parallax>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
