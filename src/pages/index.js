@@ -5,6 +5,7 @@ import Experience from "../components/sections/experience"
 import About from "../components/sections/about"
 import Contact from "../components/sections/contact";
 import Layout from "../components/layout"
+import ContactForm from "../components/contactForm"
 
 const IndexPage = () => (
   <Layout>
@@ -12,7 +13,9 @@ const IndexPage = () => (
       <Landing offset={0} />
       <Experience offset={1} />
       <About offset={3} />
-      <Contact offset={4} />
+      <Contact offset={4}>
+        <ContactForm />
+      </Contact>
     </Parallax>
   </Layout>
 )

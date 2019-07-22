@@ -26,7 +26,7 @@ const SubTitle = styled.p`
   }
 `
 
-const Contact = ({ offset }) => (
+const Contact = ({ offset, children }) => (
   <>
     <Divider fill="#23262b" speed={0.2} offset={offset}>
 
@@ -35,7 +35,7 @@ const Contact = ({ offset }) => (
       <Inner>
         <Title>Get in Touch</Title>
         <SubTitle>Say Hello!</SubTitle>
-        <ContactForm />
+        {children}
       </Inner>
     </Content>
     <Divider speed={0.1} offset={offset}>
