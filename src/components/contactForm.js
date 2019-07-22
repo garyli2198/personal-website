@@ -60,7 +60,7 @@ const Button = styled.button`
 `
 
 const ContactForm = () => (
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <form data-netlify="true" netlify-honeypot="bot-field" name="contact" method="post">
     <input type="hidden" name="form-name" value="contact" />
     <Hidden>Don’t fill this out if you're human: <input name="bot-field" type="text"/></Hidden>
     <Input type="text" name="name" placeholder="Name" required/>

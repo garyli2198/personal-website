@@ -24,7 +24,7 @@ const SubTitle = styled.p`
 const Intro = () => (
   <>
     <Greeting>Hello, <br /> I'm Gary</Greeting>
-    <SubTitle>Web developer. CS @ Berkeley. Extremely mediocre home cook.</SubTitle>
+    <SubTitle>I am an alcoholic who can kinda code.</SubTitle>
   </>
 )
 
