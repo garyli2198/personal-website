@@ -35,7 +35,7 @@ const Contact = ({ offset, children }) => (
       <Inner>
         <Title>Get in Touch</Title>
         <SubTitle>Say Hello!</SubTitle>
-        {children}
+        <ContactForm />
       </Inner>
     </Content>
     <Divider speed={0.1} offset={offset}>
