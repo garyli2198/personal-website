@@ -26,7 +26,7 @@ const Intro = () => (
     <Greeting>
       Hello, <br /> I'm Gary
     </Greeting>
-    <SubTitle>I am an alcoholic who can kinda code.</SubTitle>
+    <SubTitle>Web Developer. CS @ Berkeley. Extremely mediocre home cook.</SubTitle>
   </>
 );
 
