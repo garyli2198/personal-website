@@ -87,45 +87,50 @@ export default class ContactForm extends React.Component {
       }),
     }).catch(error => alert(error));
   };
+
+  render() {
+    return (
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <Hidden>
+          Don’t fill this out if you're human:{" "}
+          <input name="bot-field" type="text" onChange={this.handleChange} />
+        </Hidden>
+        <Input
+          type="text"
+          name="name"
+          placeholder="Name"
+          onChange={this.handleChange}
+          required
+        />
+        <Input
+          type="email"
+          name="email"
+          placeholder="Email"
+          onChange={this.handleChange}
+          required
+        />
+        <Input
+          type="text"
+          name="organization"
+          placeholder="Organization"
+          onChange={this.handleChange}
+        />
+        <TextArea
+          rows="6"
+          name="message"
+          placeholder="Your Message"
+          onChange={this.handleChange}
+          required
+        ></TextArea>
+        <Button type="submit">Send Message</Button>
+      </form>
+    );
+  }
 }
-<form
-  name="contact"
-  method="post"
-  data-netlify="true"
-  data-netlify-honeypot="bot-field"
-  onSubmit={this.handleSubmit}
->
-  <input type="hidden" name="form-name" value="contact" />
-  <Hidden>
-    Don’t fill this out if you're human:{" "}
-    <input name="bot-field" type="text" onChange={this.handleChange} />
-  </Hidden>
-  <Input
-    type="text"
-    name="name"
-    placeholder="Name"
-    onChange={this.handleChange}
-    required
-  />
-  <Input
-    type="email"
-    name="email"
-    placeholder="Email"
-    onChange={this.handleChange}
-    required
-  />
-  <Input
-    type="text"
-    name="organization"
-    placeholder="Organization"
-    onChange={this.handleChange}
-  />
-  <TextArea
-    rows="6"
-    name="message"
-    placeholder="Your Message"
-    onChange={this.handleChange}
-    required
-  ></TextArea>
-  <Button type="submit">Send Message</Button>
-</form>;
