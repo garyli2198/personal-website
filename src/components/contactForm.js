@@ -68,7 +68,9 @@ const encode = data => {
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      submittedForm: false
+    };
   }
 
   handleChange = e => {
@@ -85,10 +87,18 @@ export default class ContactForm extends React.Component {
         "form-name": form.getAttribute("name"),
         ...this.state,
       }),
-    }).catch(error => alert(error));
+    })
+      .then(() => this.setState({ submittedForm: true }))
+      .catch(error => alert(error));
   };
 
   render() {
+    const { submittedForm } = this.state;
+
+    if(submittedForm) {
+      return <h2>Your message has been sent and I'll get back to you soon!</h2>
+    }
+
     return (
       <form
         name="contact"
