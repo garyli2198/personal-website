@@ -59,24 +59,73 @@ const Button = styled.button`
   }
 `;
 
-const ContactForm = () => (
-  <form name="contact" method="post" netlify netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact" />
-    <Hidden>
-      Don’t fill this out if you're human:{" "}
-      <input name="bot-field" type="text" />
-    </Hidden>
-    <Input type="text" name="name" placeholder="Name" required />
-    <Input type="email" name="email" placeholder="Email" required />
-    <Input type="text" name="organization" placeholder="Organization" />
-    <TextArea
-      rows="6"
-      name="message"
-      placeholder="Your Message"
-      required
-    ></TextArea>
-    <Button type="submit">Send Message</Button>
-  </form>
-);
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
-export default ContactForm;
+export default class ContactForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state,
+      }),
+    }).catch(error => alert(error));
+  };
+}
+<form
+  name="contact"
+  method="post"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  onSubmit={this.handleSubmit}
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <Hidden>
+    Don’t fill this out if you're human:{" "}
+    <input name="bot-field" type="text" onChange={this.handleChange} />
+  </Hidden>
+  <Input
+    type="text"
+    name="name"
+    placeholder="Name"
+    onChange={this.handleChange}
+    required
+  />
+  <Input
+    type="email"
+    name="email"
+    placeholder="Email"
+    onChange={this.handleChange}
+    required
+  />
+  <Input
+    type="text"
+    name="organization"
+    placeholder="Organization"
+    onChange={this.handleChange}
+  />
+  <TextArea
+    rows="6"
+    name="message"
+    placeholder="Your Message"
+    onChange={this.handleChange}
+    required
+  ></TextArea>
+  <Button type="submit">Send Message</Button>
+</form>;
