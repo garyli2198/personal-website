@@ -97,6 +97,10 @@ export default class ContactForm extends React.Component {
       return <h2>Your message has been sent and I'll get back to you soon!</h2>
     }
 
+    if (submitSuccess === false) {
+      return <h2>Oops! Something went wrong, please try sending a message later.</h2>
+    }
+
     return (
       <form
         name="contact"
