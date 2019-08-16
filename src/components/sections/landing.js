@@ -26,6 +26,5 @@ const Landing = ({ offset }) => (
 export default Landing;
 
 Landing.propTypes = {
-  children: PropTypes.node.isRequired,
   offset: PropTypes.number.isRequired,
 };

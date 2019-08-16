@@ -21,7 +21,8 @@ const Experience = ({ offset }) => (
             link="https://multithreaded.stitchfix.com/engineering"
             background="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
           >
-            I'm currently interning at Stitch Fix.
+            I interned at Stitch Fix the summer of 2019, working on extracting the checkout experience from
+            the existing monolith to its own micro frontend.
           </Card>
           <Card
             title="Cal Hacks"
@@ -58,6 +59,5 @@ const Experience = ({ offset }) => (
 export default Experience;
 
 Experience.propTypes = {
-  children: PropTypes.node.isRequired,
   offset: PropTypes.number.isRequired,
 };
