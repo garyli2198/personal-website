@@ -1,38 +1,61 @@
 import React from "react";
+import { Link } from "gatsby"
 import PropTypes from "prop-types";
 import { Divider } from "../shared/divider";
 import Content, { Inner, Title } from "../shared/content";
-import { ReactTypeformEmbed } from "react-typeform-embed";
+import styled from "styled-components";
 
-const typeformStyle = {
-  height: "500px",
-  position: "relative"
-}
-
-export default class Contact extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = { showTypeform: true };
+const Button = styled(props => <Link {...props} />)`
+  padding: 1rem 2rem;
+  background: #8300ff;
+  border: 2px solid #8300ff;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.125rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.4s;
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
   }
-
-  render() {
-    const { offset } = this.props;
-    const { showTypeform } = this.state;
-    return (
-      <>
-        <Divider fill="#23262b" speed={0.2} offset={offset}></Divider>
-        <Content speed={0.4} offset={offset}>
-          <Inner>
-            <Title>Contact</Title>
-            {showTypeform && <ReactTypeformEmbed url="https://garyli.typeform.com/to/J9C865" hideHeaders={true} hideFooter={true} style={typeformStyle} />}
-          </Inner>
-        </Content>
-        <Divider speed={0.1} offset={offset}></Divider>
-      </>
-    )
+  @media (min-width: 600px) {
+    font-size: 1.25rem;
   }
-}
+  @media (min-width: 900px) {
+    font-size: 1.5rem;
+  }
+`;
+
+const SubTitle = styled.p`
+  color: #dae4e9;
+  font-size: 1.125rem;
+  @media (min-width: 600px) {
+    font-size: 1.25rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 1.5rem;
+  }
+`;
+
+const Contact = ({offset}) => (
+  <>
+    <Divider fill="#23262b" speed={0.2} offset={offset}></Divider>
+    <Content speed={0.4} offset={offset}>
+      <Inner>
+        <Title>Contact</Title>
+        <SubTitle>If you're interested in me and what I do, get in touch.</SubTitle>
+        <br />
+        <Button to="/contact/">Say Hello!</Button>
+      </Inner>
+    </Content>
+    <Divider speed={0.1} offset={offset}></Divider>
+  </>
+)
+
 
 Contact.propTypes = {
   offset: PropTypes.number.isRequired,
 };
+
+export default Contact;
