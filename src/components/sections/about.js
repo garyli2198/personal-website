@@ -31,9 +31,9 @@ const About = ({ offset }) => (
       <Inner>
         <Title>About</Title>
         <AboutDesc>
-          Hey! I'm a student at UC Berkeley studying computer science. In my
-          free time, I like to game, listen to podcasts, and play with my pet
-          hamster Butters.
+          Hey! I'm a student at UC Berkeley studying computer science. My main interests primarily lie
+          in web development, cyber security, and blockchain. In my free time, I like to game, listen to podcasts,
+          and play with my pet hamster Butters.
         </AboutDesc>
       </Inner>
     </Content>

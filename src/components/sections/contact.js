@@ -44,7 +44,7 @@ const Contact = ({offset}) => (
     <Content speed={0.4} offset={offset}>
       <Inner>
         <Title>Contact</Title>
-        <SubTitle>If you're interested in me and what I do, get in touch.</SubTitle>
+        <SubTitle>If you're interested in me and what I do, want to see my resume, or just wanna chat, get in touch.</SubTitle>
         <br />
         <Button to="/contact/">Say Hello!</Button>
       </Inner>
