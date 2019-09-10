@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Divider } from "../shared/divider";
 import Content from "../shared/content";
 import Intro from "../intro";
+import ScrollMouse from "../mouse"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -18,6 +19,7 @@ const Landing = ({ offset }) => (
     <Content speed={0.4} offset={offset}>
       <Wrapper>
         <Intro />
+        <ScrollMouse />
       </Wrapper>
     </Content>
   </>
