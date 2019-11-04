@@ -24,14 +24,16 @@ export default class Meet extends React.Component {
   render() {
     const { widget } = this.state;
     return (
-      <Layout>
+      <>
         <Helmet>
           <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
         </Helmet>
-        <Container>
-          {widget}
-        </Container>
-      </Layout>
+        <Layout>
+          <Container>
+            {widget}
+          </Container>
+        </Layout>
+      </>
     )
   }
 }
