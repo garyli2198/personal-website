@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet"
 import styled from "styled-components";
 import Layout from "../components/layout";
 
@@ -15,7 +14,13 @@ export default class Meet extends React.Component {
   state = {
     widget: null
   }
+
   componentDidMount() {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    document.body.appendChild(script);
+
     this.setState({
       widget: <CalendlyWidget className="calendly-inline-widget" data-url="https://calendly.com/gary-li/60min?background_color=23262B&text_color=f5f5f5&primary_color=B568FF" />
     })
@@ -24,16 +29,11 @@ export default class Meet extends React.Component {
   render() {
     const { widget } = this.state;
     return (
-      <>
-        <Helmet>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-        </Helmet>
-        <Layout>
-          <Container>
-            {widget}
-          </Container>
-        </Layout>
-      </>
+      <Layout>
+        <Container>
+          {widget}
+        </Container>
+      </Layout>
     )
   }
 }
