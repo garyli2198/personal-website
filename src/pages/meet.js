@@ -7,7 +7,7 @@ const CalendlyWidget = styled.div`
   height: 100vh;
 `
 const Container = styled.div`
-  background-color: #161719;
+  background-color: #FBFCFD;
   margin: 0;
 `
 export default class Meet extends React.Component {
