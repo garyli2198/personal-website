@@ -5,11 +5,11 @@ export const Divider = styled(ParallaxLayer)`
   position: absolute;
   height: 100%;
   width: 100%;
-  background: ${props => props.bg};
+  background: ${(props) => props.bg};
   svg {
-    fill: ${props => props.fill};
+    fill: ${(props) => props.fill};
   }
-  clip-path: ${props => props.clipPath};
+  clip-path: ${(props) => props.clipPath};
 `;
 
 export const DividerMiddle = styled(Divider)`

@@ -20,7 +20,7 @@ export const CardsContainer = styled.div`
 
 const Container = styled.a`
   width: 100%;
-  background: ${props => props.background};
+  background: ${(props) => props.background};
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &:hover {
     transform: translateY(-5px);
@@ -61,7 +61,9 @@ const Description = styled.div`
   }
 `;
 
-const Card = ({ title, link, children, background }) => (
+const Card = ({
+  title, link, children, background,
+}) => (
   <Container
     href={link}
     target="_blank"

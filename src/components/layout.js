@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SEO from "./seo";
 import { createGlobalStyle } from "styled-components";
+import SEO from "./seo";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: #B566FF;
   }
 
   body {
@@ -31,15 +32,13 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <GlobalStyle />
-      <SEO title="Gary Li" />
-      {children}
-    </>
-  );
-};
+const Layout = ({ children }) => (
+  <>
+    <GlobalStyle />
+    <SEO title="Gary Li" />
+    {children}
+  </>
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

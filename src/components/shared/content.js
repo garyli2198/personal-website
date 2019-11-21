@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ParallaxLayer } from "react-spring/renderprops-addons.cjs";
 import triangle from "../../svgs/triangle.svg";
-import { rotateAnimation } from "../shared/animation";
+import { rotateAnimation } from "./animation";
 
 export const Inner = styled.div`
   width: 100%;

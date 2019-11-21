@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import * as Scroll from "react-scroll";
 import Content, { Inner, Title } from "../shared/content";
 import { Divider, DividerMiddle } from "../shared/divider";
 import Card, { CardsContainer } from "../card";
+
 
 const Experience = ({ offset }) => (
   <>
@@ -14,15 +16,15 @@ const Experience = ({ offset }) => (
     />
     <Content speed={0.4} offset={`${offset}.2`} factor={2}>
       <Inner>
-        <Title>Experience</Title>
+        <Title id="experience">Experience</Title>
         <CardsContainer>
           <Card
             title="Stitch Fix"
             link="https://multithreaded.stitchfix.com/engineering"
             background="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
           >
-            I interned at Stitch Fix the summer of 2019, working on extracting the checkout experience from
-            the existing monolith to its own micro frontend.
+            I interned at Stitch Fix the summer of 2019, working on extracting
+            the checkout experience from the existing monolith to its own micro frontend.
           </Card>
           <Card
             title="Cal Hacks"
@@ -52,12 +54,12 @@ const Experience = ({ offset }) => (
         </CardsContainer>
       </Inner>
     </Content>
-    <Divider speed={0.1} offset={offset} factor={2}></Divider>
+    <Divider speed={0.1} offset={offset} factor={2} />
   </>
 );
-
-export default Experience;
 
 Experience.propTypes = {
   offset: PropTypes.number.isRequired,
 };
+
+export default Scroll.ScrollElement(Experience);

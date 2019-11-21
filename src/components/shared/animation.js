@@ -25,6 +25,6 @@ export const bounceAnimation = () => css`
   animation: ${bounce} 2s infinite;
 `;
 
-export const rotateAnimation = length => css`
+export const rotateAnimation = (length) => css`
   animation: ${rotate} ${length} linear infinite;
 `;

@@ -1,50 +1,51 @@
 module.exports = {
   siteMetadata: {
-    title: `Gary Li`,
-    description: `Gary Li's Personal Website`,
-    author: `Gary Li`,
+    title: "Gary Li",
+    description: "Gary Li's Personal Website",
+    author: "Gary Li",
     url: "https://www.iamgary.li",
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-smoothscroll",
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: "gatsby-plugin-prefetch-google-fonts",
       options: {
         fonts: [
           {
-            family: `Josefin Sans`,
-            variants: [`600`],
+            family: "Josefin Sans",
+            variants: ["600"],
           },
           {
-            family: `Nunito`,
+            family: "Nunito",
           },
         ],
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `pages`,
+        name: "pages",
         path: `${__dirname}/src/pages/`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-sharp`,
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-netlify",
+    "gatsby-plugin-sharp",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `I am Gary Li`,
-        short_name: `Gary Li`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `fullscreen`,
+        name: "I am Gary Li",
+        short_name: "Gary Li",
+        start_url: "/",
+        background_color: "#663399",
+        theme_color: "#663399",
+        display: "fullscreen",
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "UA-143390260-1",
       },

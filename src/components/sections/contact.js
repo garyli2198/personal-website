@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Divider } from "../shared/divider";
 import Content, { Inner, Title } from "../shared/content";
-import styled from "styled-components";
 
-const Button = styled(props => <Link {...props} />)`
+const Button = styled((props) => <Link {...props} />)`
   padding: 1rem 2rem;
   background: #8300ff;
   border: 2px solid #8300ff;
@@ -38,20 +38,24 @@ const SubTitle = styled.p`
   }
 `;
 
-const Contact = ({offset}) => (
+const Contact = ({ offset }) => (
   <>
-    <Divider fill="#23262b" speed={0.2} offset={offset}></Divider>
+    <Divider fill="#23262b" speed={0.2} offset={offset} />
     <Content speed={0.4} offset={offset}>
       <Inner>
         <Title>Contact</Title>
-        <SubTitle>If you're interested in me and what I do, want to see my resume, or just wanna chat, get in touch.</SubTitle>
+        <SubTitle>
+          If you're interested in me and what I do,
+          {" "}
+          want to see my resume, or just wanna chat, get in touch.
+        </SubTitle>
         <br />
         <Button to="/contact/">Say Hello!</Button>
       </Inner>
     </Content>
-    <Divider speed={0.1} offset={offset}></Divider>
+    <Divider speed={0.1} offset={offset} />
   </>
-)
+);
 
 
 Contact.propTypes = {

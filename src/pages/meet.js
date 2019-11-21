@@ -5,14 +5,15 @@ import Layout from "../components/layout";
 const CalendlyWidget = styled.div`
   width: 100vw;
   height: 100vh;
-`
+`;
 const Container = styled.div`
   background-color: #FBFCFD;
   margin: 0;
-`
+`;
 export default class Meet extends React.Component {
-  state = {
-    widget: null
+  constructor() {
+    super();
+    this.state = { widget: null };
   }
 
   componentDidMount() {
@@ -22,8 +23,8 @@ export default class Meet extends React.Component {
     document.body.appendChild(script);
 
     this.setState({
-      widget: <CalendlyWidget className="calendly-inline-widget" data-url="https://calendly.com/gary-li/60min?background_color=23262B&text_color=f5f5f5&primary_color=B568FF" />
-    })
+      widget: <CalendlyWidget className="calendly-inline-widget" data-url="https://calendly.com/gary-li/60min?background_color=23262B&text_color=f5f5f5&primary_color=B568FF" />,
+    });
   }
 
   render() {
@@ -34,7 +35,6 @@ export default class Meet extends React.Component {
           {widget}
         </Container>
       </Layout>
-    )
+    );
   }
 }
-

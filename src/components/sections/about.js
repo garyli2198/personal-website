@@ -26,14 +26,20 @@ const About = ({ offset }) => (
       speed={0.2}
       offset={offset}
     />
-    <Divider speed={0.1} offset={offset}></Divider>
+    <Divider speed={0.1} offset={offset} />
     <Content offset={offset}>
       <Inner>
         <Title>About</Title>
         <AboutDesc>
-          Hey! I'm a student at UC Berkeley studying computer science. My main interests primarily lie
-          in full stack web development and crypto (I'm currently searching for full time opportunities!).
-          In my free time, I love to game, listen to obscure podcasts, and play with my pet hamster Butters.
+          Heya stranger! I'm currently a student at UC Berkeley studying computer science.
+          After graduating, I'll be delivering packages for
+          {" "}
+          <a href="https://flexport.com">Flexport</a>
+          .
+          In my free time, I love to game, play with my pet hamster Butters, and
+          {" "}
+          <a href="https://www.airbnb.com/experiences/1260549">teach people how to cook Dongbei cuisine</a>
+          .
         </AboutDesc>
       </Inner>
     </Content>
