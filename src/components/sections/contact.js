@@ -57,7 +57,6 @@ const Contact = ({ offset }) => (
   </>
 );
 
-
 Contact.propTypes = {
   offset: PropTypes.number.isRequired,
 };

@@ -31,15 +31,9 @@ const About = ({ offset }) => (
       <Inner>
         <Title>About</Title>
         <AboutDesc>
-          Heya stranger! I'm currently a student at UC Berkeley studying computer science.
-          After graduating, I'll be delivering packages for
-          {" "}
-          <a href="https://flexport.com">Flexport</a>
-          .
-          In my free time, I love to game, play with my pet hamster Butters, and
-          {" "}
-          <a href="https://www.airbnb.com/experiences/1260549">teach people how to cook Dongbei cuisine</a>
-          .
+          Heya stranger! I'm a recent UC Berkeley Computer Science graduate. In the fall, I'll be working for
+          <a href="https://flexport.com">Flexport</a>. In my free time, I love to game and
+          <a href="https://www.airbnb.com/experiences/1260549">teach people how to cook Dongbei cuisine</a>.
         </AboutDesc>
       </Inner>
     </Content>

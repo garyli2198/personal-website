@@ -10,17 +10,13 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-smoothscroll",
     {
-      resolve: "gatsby-plugin-prefetch-google-fonts",
+      resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: [
-          {
-            family: "Josefin Sans",
-            variants: ["600"],
-          },
-          {
-            family: "Nunito",
-          },
+          "Nunito",
+          "Josefin Sans: 600",
         ],
+        display: "swap",
       },
     },
     {
