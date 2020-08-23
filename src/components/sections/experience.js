@@ -30,7 +30,7 @@ const Experience = ({ offset }) => (
             link="https://calhacks.io"
             background="linear-gradient(to right top, #3B9AC1, #00B4C9, #00CCBF, #60E0A6, #ABF087, #F9F871)"
           >
-            I'm was the Executive Director of Cal Hacks 6.0, the world's largest collegiate
+            I was the Executive Director of Cal Hacks 6.0, the world's largest collegiate
             hackathon.
           </Card>
           <Card
